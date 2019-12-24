@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./script.js"></script>
     <title>Basic Calculator</title>
 </head>
 <body>
@@ -11,28 +12,28 @@
     <span id="display">0</span>
     <hr>
     
-    <button id="AC">AC</button>
-    <button id="CE">CE</button>
-    <button id="/">/</button>
-    <button id="*">*</button>
+    <button id="AC" onclick="allClear()">AC</button>
+    <button id="CE" onclick="backOne()">CE</button>
+    <button id="/" onclick="getValue(this.id)">/</button>
+    <button id="*" onclick="getValue(this.id)">*</button>
     <br>
-    <button id="7">7</button>
-    <button id="8">8</button>
-    <button id="9">9</button>
-    <button id="+">+</button>
+    <button id="7" onclick="getValue(this.id)">7</button>
+    <button id="8" onclick="getValue(this.id)">8</button>
+    <button id="9" onclick="getValue(this.id)">9</button>
+    <button id="+" onclick="getValue(this.id)">+</button>
     <br>
-    <button id="4">4</button>
-    <button id="5">5</button>
-    <button id="6">6</button>
-    <button id="-">-</button>
+    <button id="4" onclick="getValue(this.id)">4</button>
+    <button id="5" onclick="getValue(this.id)">5</button>
+    <button id="6" onclick="getValue(this.id)">6</button>
+    <button id="-" onclick="getValue(this.id)">-</button>
     <br>
-    <button id="1">1</button>
-    <button id="2">2</button>
-    <button id="3">3</button>
-    <button id=".">.</button>
+    <button id="1" onclick="getValue(this.id)">1</button>
+    <button id="2" onclick="getValue(this.id)">2</button>
+    <button id="3" onclick="getValue(this.id)">3</button>
+    <button id="." onclick="getValue(this.id)">.</button>
     <br>
-    <button id="0">0</button>
-    <button id="=">=</button>
+    <button id="0" onclick="getValue(this.id)">0</button>
+    <button id="=" onclick="result()">=</button>
 
 </body>
 </html>
