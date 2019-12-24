@@ -1,0 +1,23 @@
+#display{
+    width: 40vw;
+    height: 50px;
+    display: block;
+    font-size: 2em;
+    margin: auto;
+    background-color: #ccc;
+    padding: 15px 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.buttons{
+    width: 15vw;
+    padding: auto;
+    margin: auto;
+}
+button {
+    height: 40px;
+    width: 40px;
+    margin: 5px 3px;
+
+}

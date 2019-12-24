@@ -1,10 +1,10 @@
 let inputs = [];
-let operators1 = ["+", "-", "/", "*"];
+let operators1 = ["+", "-", "/", "*", "="];
 let operators2 = ["."];
 let displayString;
-let nums = [0,1,2,3,4,5,6,7,8,9];
+let nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-function getValue(input){
+function getValue(input) {
     // //If last input is a '.' and current input is also a '.'
     // if(operators2.includes(inputs[inputs.length-1]) === true && input === "."){
     //     console.log("Duplicate '.' ");
@@ -22,13 +22,11 @@ function getValue(input){
     // display();
     // console.log(inputs);
 
-    if(nums.includes(Number(input))){
+    if (nums.includes(Number(input))) {
         inputs.push(input);
-    } 
-    else if(operators1.includes(input) === true && inputs.length !== 0 && operators1.includes(inputs[inputs.length - 1]) === false){
+    } else if (operators1.includes(input) === true && inputs.length !== 0 && operators1.includes(inputs[inputs.length - 1]) === false) {
         inputs.push(input);
-    }
-    else if(operators2.includes(input) === true && operators2.includes(inputs[inputs.length - 1]) === false){
+    } else if (operators2.includes(input) === true && operators2.includes(inputs[inputs.length - 1]) === false) {
         console.log(operators2.includes(inputs[inputs.length - 1]));
         inputs.push(input);
     }
@@ -37,31 +35,35 @@ function getValue(input){
 }
 
 //To clear all inputs
-function allClear(){
+function allClear() {
     inputs = [];
     display();
 }
 
 //To clear last entry
-function backOne(){
+function backOne() {
     inputs.pop();
     display();
 }
 
 //To display inputs on the screen
-function display(){
+function display() {
     displayString = inputs.join("");
     document.getElementById("display").innerHTML = displayString;
 }
 
 //To calculate
-function result(){
-    displayString = inputs.join("");
-    let final = eval(displayString);
-    console.log(final);
-    document.getElementById("display").innerHTML = final;
-    inputs = [];
-    inputs.push(final);
+function result() {
+    if (inputs.length === 0) {
+        displayString = "";
+    } else {
+        displayString = inputs.join("");
+        let final = eval(displayString);
+        console.log(final);
+        document.getElementById("display").innerHTML = final;
+        inputs = [];
+        inputs.push(final);
+    }
 }
 
 //when i click a button, it will call getValue() which will push the value of that button into inputs array after validating some conditions. 
